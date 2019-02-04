@@ -8,6 +8,7 @@ namespace CSharpFunctions
         {
             Console.WriteLine("Hello World!");
             IsPrimal(7);
+
         }
 
         static bool IsPrimal(int sk1)
@@ -20,8 +21,10 @@ namespace CSharpFunctions
                     return false;
                 }
             }
+            Console.WriteLine("Is Primal");
             return true;
         }
+
     }
 
 }
