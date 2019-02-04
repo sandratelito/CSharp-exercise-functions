@@ -4,9 +4,24 @@ namespace CSharpFunctions
 {
     class MainClass
     {
-        public static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Hello World!");
+            IsPrimal(7);
+        }
+
+        static bool IsPrimal(int sk1)
+        {
+            for (int i = 2; i < sk1; i++)
+            {
+                if (sk1 % i == 0)
+                {
+                    Console.WriteLine("Is Not Primal");
+                    return false;
+                }
+            }
+            return true;
         }
     }
+
 }
