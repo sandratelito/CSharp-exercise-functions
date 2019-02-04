@@ -7,12 +7,14 @@ namespace CSharpFunctions
         static void Main()
         {
             Console.WriteLine("Hello World!");
+
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
             int c = Convert.ToInt32(Console.ReadLine());
             Max(a, b, c);
             InRange(a, b, c);
-            IsPrimal(a, b, c);
+            IsPrimal(7);
+
         }
 
         static int Max(int skaicius1, int skaicius2, int skaicius3)
@@ -31,9 +33,6 @@ namespace CSharpFunctions
                 Console.WriteLine(skaicius3);
                 return skaicius3;
             }
-           
-
-
 
         }
 
@@ -53,19 +52,21 @@ namespace CSharpFunctions
         }
 
 
-        static bool IsPrimal (int skaicius1,int skaicius2,int skaicius3)
+        static bool IsPrimal(int sk1)
         {
-            if(skaicius1 % skaicius1 == 0 || skaicius2 % skaicius2 == 0 || skaicius3 % skaicius3 == 0)
+            for (int i = 2; i < sk1; i++)
             {
-                Console.WriteLine("true");
-                return true;
+                if (sk1 % i == 0)
+                {
+                    Console.WriteLine("Is Not Primal");
+                    return false;
+                }
             }
-
-            return false;
-
+            Console.WriteLine("Is Primal");
+            return true;
         }
 
 
-
     }
+
 }
